@@ -1,0 +1,3 @@
+/home/mandar/Documents/full projects/C++/Work timer/src/build/CMakeFiles/PT.dir
+/home/mandar/Documents/full projects/C++/Work timer/src/build/CMakeFiles/edit_cache.dir
+/home/mandar/Documents/full projects/C++/Work timer/src/build/CMakeFiles/rebuild_cache.dir
