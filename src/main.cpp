@@ -1,17 +1,21 @@
 #include <SFML/Graphics.hpp>
+#include "RenderObjects.hpp"
 
 using sf::RenderWindow;
 using sf::Event;
 using sf::VideoMode;
 using sf::Color;
+using sf::Vector2u;
+
 
 int main()
 {
 
-    RenderWindow window(VideoMode(800, 600), "Pomodoro-Timer");
+    RenderWindow window(VideoMode(400, 400), "Pomodoro-Timer");
 
     while (window.isOpen())
     {
+        Vector2u size = window.getSize();
         Event event;
         while (window.pollEvent(event))
         {
@@ -20,10 +24,9 @@ int main()
                 window.close();
             }
         }
-
-        window.clear(Color::Black); // rendering code only after this
+        window.clear(Color(27, 54, 93)); // rendering code only after this
+        DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
         window.display();
     }
-
     return 0;
 }
