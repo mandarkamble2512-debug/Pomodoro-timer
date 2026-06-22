@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "RenderObjects.hpp"
+#include "enum and classes.hpp"
 
 using sf::RenderWindow;
 using sf::Event;
@@ -9,6 +10,7 @@ using sf::Vector2u;
 
 float DeltaAngleChangeInFiveMinuts = 1.2;
 float DeltaAngleChangeInTwentyFiveMinuts = 0.24;
+WorkState TimerState = WorkState::Work;
 
 void AppLoop (RenderWindow& window, Vector2u size) 
 {
