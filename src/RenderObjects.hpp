@@ -27,6 +27,5 @@ void DrawClockHand(RenderWindow& window, float angleInDegrees, float length, flo
     hand.setFillColor(Color(135, 169, 135));
     hand.setRotation(angleInDegrees);
 
-    
     window.draw(hand);
 }

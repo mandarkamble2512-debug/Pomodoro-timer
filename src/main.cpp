@@ -7,6 +7,11 @@ using sf::VideoMode;
 using sf::Color;
 using sf::Vector2u;
 
+void AppLoop (RenderWindow& window, Vector2u size) 
+{
+    DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
+    DrawClockHand(window, 0, 200, 50);
+}
 
 int main()
 {
@@ -24,8 +29,7 @@ int main()
             }
         }
         window.clear(Color(27, 54, 93)); // rendering code only after this
-        DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
-        DrawClockHand(window, 0, 200, 50);
+        AppLoop(window, size);
         window.display();
     }
     return 0;
