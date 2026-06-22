@@ -25,7 +25,7 @@ int main()
         }
         window.clear(Color(27, 54, 93)); // rendering code only after this
         DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
-        DrawClockHand(window, 0, 200, 50, Color(135, 169, 135));
+        DrawClockHand(window, 0, 200, 50);
         window.display();
     }
     return 0;
