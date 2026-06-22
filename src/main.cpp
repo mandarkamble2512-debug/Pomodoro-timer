@@ -7,6 +7,9 @@ using sf::VideoMode;
 using sf::Color;
 using sf::Vector2u;
 
+float DeltaAngleChangeInFiveMinuts = 1.2;
+float DeltaAngleChangeInTwentyFiveMinuts = 0.24;
+
 void AppLoop (RenderWindow& window, Vector2u size) 
 {
     DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
@@ -16,7 +19,6 @@ void AppLoop (RenderWindow& window, Vector2u size)
 int main()
 {
     RenderWindow window(VideoMode(400, 400), "Pomodoro-Timer");
-
     while (window.isOpen())
     {
         Vector2u size = window.getSize();
