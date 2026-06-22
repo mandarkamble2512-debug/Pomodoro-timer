@@ -14,3 +14,8 @@ void DrawTimerCircle (RenderWindow& window, Vector2f Pos, int Radius)
     TimerCircle.setPointCount(35);
     window.draw(TimerCircle);
 }
+
+void DrawTimerTriangle (RenderWindow& window, Vector2f Pos, int Hight)
+{
+    
+}
