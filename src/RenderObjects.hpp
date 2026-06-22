@@ -4,6 +4,7 @@ using sf::CircleShape;
 using sf::RenderWindow;
 using sf::Vector2f;
 using sf::Color;
+using sf::ConvexShape;
 
 void DrawTimerCircle (RenderWindow& window, Vector2f Pos, int Radius)
 {
@@ -15,7 +16,17 @@ void DrawTimerCircle (RenderWindow& window, Vector2f Pos, int Radius)
     window.draw(TimerCircle);
 }
 
-void DrawTimerTriangle (RenderWindow& window, Vector2f Pos, int Hight)
-{
+void DrawClockHand(RenderWindow& window, float angleInDegrees, float length, float baseWidth, Color color) {
+    ConvexShape hand;
+    hand.setPointCount(3);
+    hand.setPoint(0, sf::Vector2f(baseWidth / 2.f, 0.f));
+    hand.setPoint(1, sf::Vector2f(baseWidth, length));
+    hand.setPoint(2, sf::Vector2f(0.f, length));
+    hand.setOrigin(baseWidth / 2.f, length);
+    hand.setPosition(200.f, 200.f);
+    hand.setFillColor(color);
+    hand.setRotation(angleInDegrees);
+
     
+    window.draw(hand);
 }
