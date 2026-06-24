@@ -8,8 +8,10 @@ using sf::VideoMode;
 using sf::Color;
 using sf::Vector2u;
 
+int NumberOfRotations = 0;
 float DeltaAngleChangeInFiveMinuts = 1.2;
 float DeltaAngleChangeInTwentyFiveMinuts = 0.24;
+float ClockHandRotation = 0;
 // float DeltaAngleChangeInFifteenMinuts;
 WorkState TimerState = WorkState::Work;
 
