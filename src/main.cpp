@@ -18,7 +18,9 @@ WorkState TimerState = WorkState::Work;
 void AppLoop (RenderWindow& window, Vector2u size) 
 {
     DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
-    DrawClockHand(window, 0, 200, 50);
+    DrawClockHand(window, ClockHandRotation, 200, 50);
+
+    
 }
 
 int main()
