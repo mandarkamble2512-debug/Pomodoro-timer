@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "logic.hpp"
 #include "RenderObjects.hpp"
 #include "Enum&Classes.hpp"
 
@@ -20,7 +21,19 @@ void AppLoop (RenderWindow& window, Vector2u size)
     DrawTimerCircle(window, Vector2f(size.x/2, size.y/2), 200);
     DrawClockHand(window, ClockHandRotation, 200, 50);
 
-    
+    StopForOneSecond();
+    if (IsTheRotationBreak(NumberOfRotations))
+    {
+        StopForOneSecond();
+        ClockHandRotation = ClockHandRotation + DeltaAngleChangeInTwentyFiveMinuts;
+        ResetClock(ClockHandRotation, NumberOfRotations);
+    }
+    else 
+    {
+        StopForOneSecond();
+        ClockHandRotation = ClockHandRotation + DeltaAngleChangeInFiveMinuts;
+        ResetClock(ClockHandRotation, NumberOfRotations);
+    }
 }
 
 int main()

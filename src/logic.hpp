@@ -9,17 +9,20 @@ void StopForOneSecond ()
     sleep_for(seconds(1));
 }
 
-void ResetClock (float& ClockHandRoataion)
+void ResetClock (float& ClockHandRoataion, int& NumberOfRotations)
 {
     if (ClockHandRoataion > 360 || ClockHandRoataion == 360)
     {
         ClockHandRoataion = 0;
     }
+    NumberOfRotations = NumberOfRotations + 1;
 }
 
-void WorkRotation (float& ClockHandRoataion, const float& DeltaAngleChangeInTwentyFiveMinuts)
+bool IsTheRotationBreak (int NumberOfRotations)
 {
-    StopForOneSecond();
-    ClockHandRoataion = ClockHandRoataion + DeltaAngleChangeInTwentyFiveMinuts;
-    ResetClock(ClockHandRoataion);
+    if (NumberOfRotations % 2 == 0)
+    {
+        return true;
+    }
+    return false;
 }
